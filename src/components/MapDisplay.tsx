@@ -31,7 +31,6 @@ const calculateGreatCirclePoints = (start: LatLngTuple, end: LatLngTuple, numPoi
                 Math.sin(dLon / 2) * Math.sin(dLon / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     const R = 6371e3; // Earth's radius in meters
-    const distance = R * c;
 
     for (let i = 0; i <= numPoints; i++) {
     const fraction = i / numPoints;

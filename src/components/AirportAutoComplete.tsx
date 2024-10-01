@@ -33,8 +33,8 @@ const AirportAutoComplete: React.FC<Props> = ({ onSelect, label }) => {
     <Autocomplete
       options={options}
       getOptionLabel={(option) => `${option.name} (${option.iata || option.icao}) - ${option.city}`}
-      onInputChange={(event, value) => handleSearch(value)}
-      onChange={(event, value) => onSelect(value as Airport)}
+      onInputChange={(_, value) => handleSearch(value)}
+      onChange={(_, value) => onSelect(value as Airport)}
       renderInput={(params) => <TextField {...params} label={label} variant="outlined" />}
     />
   );
